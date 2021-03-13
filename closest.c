@@ -47,8 +47,6 @@ typedef struct avl_node {
   struct avl_node *left;
   struct avl_node *right;
 
-  // TODO: Add the other fields you need here to complete the assignment!
-  //      (Hint: You need at least 1 more field to keep balance)
   int max;
   int min;
   int closest_pair[2];
@@ -164,7 +162,6 @@ void *getClosestPair(AVLNode *root) {
  * The allocation is already completed for you, in case you haven't used C 
  * before. For future assignments this will be up to you!
  * 
- * TODO: Initialize the new fields you have added
  */
 AVLNode *newNode(int value) {
 
@@ -235,15 +232,6 @@ AVLNode *rightRotate(AVLNode *root) {
  *       The upper bound here only exists to potentially help make the 
  *                implementation of edge cases easier.
  *
- *  TODO:
- *  - Make a node with the value and insert it into the tree
- *  - Make sure the tree is balanced (AVL property is satisfied)
- *  - Return the *head* of the new tree (A balance might change this!)
- *  - Make sure the function runs in O(log(n)) time (n = number of nodes)
- * 
- * If the value is already in the tree, do nothing and just return the root. 
- * You do not need to print an error message.
- *
  * ----
  * 
  * An example call to this function is given below. Note how the
@@ -310,14 +298,6 @@ AVLNode *insert(AVLNode *root, int value) {
  *
  * NOTE: Make sure `(*a)` stores the smaller of the two values, and
  *                 `(*b)` stores the greater of the two values.
- * 
- * NOTE: The test cases will have a unique solution, don't worry about 
- *        multiple closest pairs here.
- *
- *
- * TODO: Complete this function to return the correct closest pair.
- *       Your function should not be any slower than O(log(n)), but if 
- *       you are smart about it you can do it in constant time.
  */
 void closestPair(AVLNode *root, int *a, int *b) {
   
